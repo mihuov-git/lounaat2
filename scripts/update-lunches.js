@@ -175,18 +175,54 @@ function parseRaflaamo(text, ctx) {
 }
 
 function parseViidesNayttamo(text, ctx) {
-  const block = extractTodayBlock(text, ctx);
-  if (!block) return [];
+  const lower = text.toLowerCase();
+
+  const dateAnchors = [
+    `${ctx.weekdayName} ${ctx.day}.${ctx.month}.`.toLowerCase(),
+    `${ctx.weekdayName} ${ctx.day}.${ctx.month}`.toLowerCase()
+  ];
+
+  let startIndex = -1;
+  for (const anchor of dateAnchors) {
+    const idx = lower.indexOf(anchor);
+    if (idx !== -1) {
+      startIndex = idx;
+      break;
+    }
+  }
+
+  if (startIndex === -1) return [];
+
+  const fromToday = text.slice(startIndex);
+
+  const nextDayMarkers = ['maanantai', 'tiistai', 'keskiviikko', 'torstai', 'perjantai']
+    .filter((d) => d !== ctx.weekdayName);
+
+  let endIndex = fromToday.length;
+  for (const marker of nextDayMarkers) {
+    const rx = new RegExp(`\\n\\s*${marker}\\s+\\d{1,2}\\.\\d{1,2}\\.?`, 'i');
+    const match = rx.exec(fromToday.slice(5));
+    if (match) {
+      endIndex = Math.min(endIndex, match.index + 5);
+    }
+  }
+
+  const dayBlock = fromToday.slice(0, endIndex).trim();
 
   return dedupe(
-    splitMeaningfulLines(block)
+    dayBlock
+      .split(/\n+/)
+      .map((line) => normaliseText(line))
+      .filter(Boolean)
+      .filter((line) => !/^(maanantai|tiistai|keskiviikko|torstai|perjantai)\s+\d{1,2}\.\d{1,2}\.?$/i.test(line))
       .filter((line) => !/^sisältää /i.test(line))
       .filter((line) => !/^buffetlounas/i.test(line))
       .filter((line) => !/^salaattilounas/i.test(line))
       .filter((line) => !/^viikon lautasannos/i.test(line))
       .filter((line) => !/^kermainen lohikeitto/i.test(line))
-      .filter((line) => !/^tilounas/i.test(line))
-  ).slice(0, 6);
+      .filter((line) => !/^päivän kala/i.test(line))
+      .filter((line) => !/^sis\./i.test(line))
+  ).slice(0, 4);
 }
 
 function isLikelyAitiopaikkaFoodLine(line) {
@@ -283,7 +319,7 @@ async function fetchSource(page, source, ctx) {
         break;
       }
     } catch (e) {
-      // jatketaan
+        // jatketaan
     }
   }
 
