@@ -81,6 +81,24 @@ function cleanupText(raw) {
   );
 }
 
+function stripCookieBannerLines(text) {
+  return text
+    .split('\n')
+    .map((line) => normaliseText(line))
+    .filter(Boolean)
+    .filter((line) => !/kumppaneillemme tietoja siitä/i.test(line))
+    .filter((line) => !/käytät sivustoamme/i.test(line))
+    .filter((line) => !/yhdistää näitä tietoja muihin tietoihin/i.test(line))
+    .filter((line) => !/^kiellä$/i.test(line))
+    .filter((line) => !/^salli kaikki$/i.test(line))
+    .filter((line) => !/^näytä tiedot ja muokkaa$/i.test(line))
+    .filter((line) => !/^siirry sisältöön$/i.test(line))
+    .filter((line) => !/^fresco ravintolat$/i.test(line))
+    .filter((line) => !/^etusivu$/i.test(line))
+    .filter((line) => !/^eväste/i.test(line))
+    .join('\n');
+}
+
 function splitMeaningfulLines(block) {
   return block
     .split(/\n+/)
@@ -97,6 +115,7 @@ function extractTodayBlock(text, ctx) {
   const startPatterns = [
     `${ctx.weekdayName} ${ctx.dateLabel}`,
     `${ctx.weekdayName} ${ctx.day}.${ctx.month}`,
+    `${ctx.weekdayName} ${ctx.day}.${ctx.month}.`,
     ...aliases,
   ];
 
@@ -134,6 +153,7 @@ function parseRaflaamo(text, ctx) {
   const lines = splitMeaningfulLines(block)
     .filter((line) => !/^lounas[: ]/i.test(line))
     .filter((line) => !/^lounasmenu$/i.test(line))
+    .filter((line) => !/^lounasmenu\b/i.test(line))
     .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
     .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
     .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
@@ -164,25 +184,63 @@ function parseViidesNayttamo(text, ctx) {
       .filter((line) => !/^salaattilounas/i.test(line))
       .filter((line) => !/^viikon lautasannos/i.test(line))
       .filter((line) => !/^kermainen lohikeitto/i.test(line))
+      .filter((line) => !/^tilounas/i.test(line))
   ).slice(0, 6);
 }
 
 function parseAitiopaikka(text, ctx) {
   const block = extractTodayBlock(text, ctx);
   if (!block) return [];
+
   return dedupe(
     splitMeaningfulLines(block)
       .filter((line) => !/^l\s*=|^m\s*=|^g\s*=|^v\s*=/i.test(line))
       .filter((line) => !/^lihojen ja broilerin alkuperämaa/i.test(line))
+      .filter((line) => !/kumppaneillemme tietoja siitä/i.test(line))
+      .filter((line) => !/käytät sivustoamme/i.test(line))
+      .filter((line) => !/yhdistää näitä tietoja muihin tietoihin/i.test(line))
+      .filter((line) => !/^kiellä$/i.test(line))
+      .filter((line) => !/^salli kaikki$/i.test(line))
+      .filter((line) => !/^näytä tiedot ja muokkaa$/i.test(line))
+      .filter((line) => !/^siirry sisältöön$/i.test(line))
+      .filter((line) => !/^fresco ravintolat$/i.test(line))
+      .filter((line) => !/^lounashinnat$/i.test(line))
+      .filter((line) => !/^etusivu$/i.test(line))
   ).slice(0, 6);
 }
 
 async function fetchSource(page, source, ctx) {
   await page.goto(source.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForTimeout(4000);
-  const bodyText = normaliseText(await page.locator('body').innerText());
-  const html = await page.content();
-  const combined = `${bodyText}\n${cleanupText(html)}`;
+
+  const cookieSelectors = [
+    'button:has-text("Salli kaikki")',
+    'button:has-text("Hyväksy")',
+    'button:has-text("Accept all")',
+    'button:has-text("Accept")'
+  ];
+
+  for (const selector of cookieSelectors) {
+    try {
+      const btn = page.locator(selector).first();
+      if (await btn.isVisible({ timeout: 1000 })) {
+        await btn.click({ timeout: 1000 });
+        await page.waitForTimeout(1500);
+        break;
+      }
+    } catch (e) {
+      // jatketaan
+    }
+  }
+
+  const bodyText = stripCookieBannerLines(
+    normaliseText(await page.locator('body').innerText())
+  );
+  const html = stripCookieBannerLines(
+    cleanupText(await page.content())
+  );
+
+  const combined = `${bodyText}\n${html}`;
   const items = source.parser(combined, ctx);
   return items;
 }
