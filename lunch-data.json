@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T06:46:10.003Z",
+  "generatedAt": "2026-04-07T09:19:01.634Z",
   "dateLabel": "tiistaina 7.4.2026",
   "weekdayName": "tiistai",
   "mode": "automatic",
@@ -29,8 +29,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Päivän kalaa, kauden kasviksia ja hollandaisekastiketta L,G",
-        "sis. salaattipöydän, talon leipää, kahvin/teen ja pienen makean."
+        "Maissipaneroitua kanaa, paahdettua persiljaperunaa ja curryremouladea L,G",
+        "Mexican pihvit ja salsaa Veg,G"
       ],
       "status": "ok",
       "message": ""
@@ -41,13 +41,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Tomaattiset feta-lihapullat L,G, pastaa M, parmesan",
-        "Paahdettua maalaiskanaa M,G, currymajoneesi M,G, paprikariisi M,G",
-        "Kukkakaalikeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "error",
+      "message": "Haku epäonnistui: page.goto: net::ERR_CONNECTION_CLOSED at https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/\nCall log:\n  - navigating to \"https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/\", waiting until \"domcontentloaded\"\n"
     }
   ]
 }
