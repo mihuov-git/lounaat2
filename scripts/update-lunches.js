@@ -54,6 +54,10 @@ function getTodayContext() {
   return { helsinki, weekdayName, day, month, dateLabel, dateLabelLong };
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 function normaliseText(text) {
   return text
     .replace(/\u00A0/g, ' ')
@@ -299,9 +303,32 @@ function parseAitiopaikka(text, ctx) {
   return dedupe(lines).slice(0, 5);
 }
 
+async function safeGoto(page, url) {
+  let lastError;
+
+  const waitModes = ['domcontentloaded', 'load'];
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    for (const waitUntil of waitModes) {
+      try {
+        await page.goto(url, {
+          waitUntil,
+          timeout: 60000,
+        });
+        await page.waitForTimeout(4000);
+        return;
+      } catch (error) {
+        lastError = error;
+        await sleep(2000 * attempt);
+      }
+    }
+  }
+
+  throw lastError;
+}
+
 async function fetchSource(page, source, ctx) {
-  await page.goto(source.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForTimeout(4000);
+  await safeGoto(page, source.url);
 
   const cookieSelectors = [
     'button:has-text("Salli kaikki")',
@@ -319,7 +346,7 @@ async function fetchSource(page, source, ctx) {
         break;
       }
     } catch (e) {
-        // jatketaan
+      // jatketaan
     }
   }
 
@@ -361,11 +388,16 @@ async function main() {
   }
 
   const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage({ locale: 'fi-FI', timezoneId: 'Europe/Helsinki' });
   const results = [];
 
   try {
     for (const source of sources) {
+      const page = await browser.newPage({
+        locale: 'fi-FI',
+        timezoneId: 'Europe/Helsinki',
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+      });
+
       try {
         const items = await fetchSource(page, source, ctx);
         results.push({
@@ -389,6 +421,8 @@ async function main() {
           status: 'error',
           message: `Haku epäonnistui: ${error.message}`
         });
+      } finally {
+        await page.close();
       }
     }
   } finally {
