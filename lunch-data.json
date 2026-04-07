@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T06:16:20.890Z",
+  "generatedAt": "2026-04-07T06:31:33.288Z",
   "dateLabel": "tiistaina 7.4.2026",
   "weekdayName": "tiistai",
   "mode": "automatic",
@@ -42,12 +42,7 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "tinpoika, Rauma",
-        "Satamanportti, Rauma",
-        "Skanssi, Rauma",
-        "Kustaan Keidas, Laitila",
-        "Aitiopaikka, Turku",
-        "Korkki, Turku"
+        "tiopaikan lounaslista"
       ],
       "status": "ok",
       "message": ""
