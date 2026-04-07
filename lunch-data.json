@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T06:10:16.077Z",
+  "generatedAt": "2026-04-07T06:16:20.890Z",
   "dateLabel": "tiistaina 7.4.2026",
   "weekdayName": "tiistai",
   "mode": "automatic",
@@ -29,7 +29,6 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "tilounas 10,50 €",
         "Päivän kalaa, kauden kasviksia ja hollandaisekastiketta L,G",
         "sis. salaattipöydän, talon leipää, kahvin/teen ja pienen makean."
       ],
@@ -43,12 +42,12 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "tiikka-alan kumppaneillemme tietoja siitä, miten käytät sivustoamme. Kumppanimme voivat yhdistää näitä tietoja muihin tietoihin, joita olet antanut heille tai joita on kerätty, kun olet käyttänyt heidän palvelujaan.",
-        "Kiellä",
-        "Salli kaikki",
-        "Näytä tiedot ja muokkaa",
-        "Siirry sisältöön",
-        "Fresco Ravintolat"
+        "tinpoika, Rauma",
+        "Satamanportti, Rauma",
+        "Skanssi, Rauma",
+        "Kustaan Keidas, Laitila",
+        "Aitiopaikka, Turku",
+        "Korkki, Turku"
       ],
       "status": "ok",
       "message": ""
