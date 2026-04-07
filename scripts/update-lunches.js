@@ -160,22 +160,23 @@ function parseRaflaamo(text, ctx) {
     .filter((line) => !/^lounasmenu\b/i.test(line))
     .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
     .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
+    .filter((line) => !/^jälkiruokana:/i.test(line))
+    .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
     .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
     .filter((line) => !/^\*+$/.test(line));
 
   const cleaned = [];
   for (const line of lines) {
-    if (/^jälkiruokana:/i.test(line) || /^perinteiset/i.test(line) || /^paistettua/i.test(line) || /^kasvis-/i.test(line)) {
-      cleaned.push(line);
-      continue;
-    }
-    if (/^lounasmenu/i.test(line)) continue;
-    if (/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line)) {
+    if (
+      /^perinteiset/i.test(line) ||
+      /^paistettua/i.test(line) ||
+      /^kasvis-/i.test(line)
+    ) {
       cleaned.push(line);
     }
   }
 
-  return dedupe(cleaned).slice(0, 10);
+  return dedupe(cleaned).slice(0, 5);
 }
 
 function parseViidesNayttamo(text, ctx) {
@@ -305,7 +306,6 @@ function parseAitiopaikka(text, ctx) {
 
 async function safeGoto(page, url) {
   let lastError;
-
   const waitModes = ['domcontentloaded', 'load'];
 
   for (let attempt = 1; attempt <= 3; attempt++) {
