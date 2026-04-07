@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tämän päivän lounaat</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #22c55e;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0b1120 0%, #111827 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .hero {
+      margin-bottom: 28px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(17, 24, 39, 0.75);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 70ch;
+    }
+
+    .meta {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(17, 24, 39, 0.88);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 20px 20px 14px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
+    }
+
+    .card-header h2 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .card-header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .status {
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .status.ok { color: #bbf7d0; }
+    .status.warn { color: #fde68a; }
+    .status.error { color: #fecaca; }
+
+    .card-body {
+      padding: 18px 20px 22px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+    }
+
+    .price-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .price-value {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .menu-list {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+      color: var(--text);
+    }
+
+    .menu-list li {
+      line-height: 1.5;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      appearance: none;
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--accent);
+      color: #052e16;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Tämän päivän lounaat</h1>
+      <p class="subtitle">
+        Sivusto näyttää GitHub Actionsin joka aamu hakeman lounasdatan kolmesta Turun ravintolasta.
+        Sivulla ei käytetä käsin ylläpidettyä varadataa.
+      </p>
+      <div class="meta">
+        <div class="pill" id="today-pill">Päivä: ladataan...</div>
+        <div class="pill" id="updated-pill">Päivitetty: -</div>
+      </div>
+      <div class="actions">
+        <button class="button" id="refresh-button">Lataa uusin data</button>
+        <button class="button secondary" id="toggle-debug">Näytä debug</button>
+      </div>
+      <div class="note" id="debug" style="display:none;"></div>
+    </section>
+
+    <section class="grid" id="cards"></section>
+
+    <section class="footer">
+      <strong>Miten tämä toimii:</strong> GitHub Actions ajaa aamuisin automaattisen haun,
+      kirjoittaa tuloksen tiedostoon <code>lunch-data.json</code> ja sivu näyttää sen sisällön.
+      Lähteet:
+      <a href="https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas" target="_blank" rel="noreferrer">Grill it! Marina</a>,
+      <a href="https://www.viidesnayttamo.fi/?page_id=73" target="_blank" rel="noreferrer">Viides Näyttämö</a>,
+      <a href="https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/" target="_blank" rel="noreferrer">Aitiopaikka</a>.
+    </section>
+  </div>
+
+
+  <script id="embedded-lunch-data" type="application/json">
+{
+  "generatedAt": null,
+  "dateLabel": "ei vielä päivitetty",
+  "weekdayName": null,
+  "mode": "pending",
+  "results": [
+    {
+      "key": "grillIt",
+      "name": "Grill it! Marina",
+      "subtitle": "Raflaamo",
+      "price": "14,90 €",
+      "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
+      "items": [],
+      "status": "pending",
+      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+    },
+    {
+      "key": "viidesNayttamo",
+      "name": "Viides Näyttämö",
+      "subtitle": "Kulttuuriranta",
+      "price": "13,70 €",
+      "url": "https://www.viidesnayttamo.fi/?page_id=73",
+      "items": [],
+      "status": "pending",
+      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+    },
+    {
+      "key": "aitiopaikka",
+      "name": "Aitiopaikka",
+      "subtitle": "Fresco Ravintolat",
+      "price": "13,50 €",
+      "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
+      "items": [],
+      "status": "pending",
+      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+    }
+  ]
+}
+  </script>
+
+  <script>
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatUpdatedTime(value) {
+      if (!value) return '-';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleString('fi-FI', {
+        year: 'numeric', month: 'numeric', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+    }
+
+    function renderCards(results, todayName) {
+      const root = document.getElementById('cards');
+      root.innerHTML = '';
+
+      for (const result of results) {
+        const statusClass = result.status === 'ok'
+          ? 'ok'
+          : (result.status === 'missing' || result.status === 'pending' || result.status === 'closed')
+          ? 'warn'
+          : 'error';
+
+        const statusText = result.status === 'ok'
+          ? 'Haettu automaattisesti'
+          : result.status === 'closed'
+          ? 'Ei lounasta tänään'
+          : result.status === 'pending'
+          ? 'Ensimmäinen ajo puuttuu'
+          : result.status === 'missing'
+          ? 'Päivän rivejä ei löytynyt'
+          : 'Haku epäonnistui';
+
+        const items = Array.isArray(result.items) && result.items.length
+          ? `<ul class="menu-list">${result.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+          : `<div class="note">${escapeHtml(result.message || 'Tälle päivälle ei löytynyt lounaslistaa.')}</div>`;
+
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class="card-header">
+            <h2>${escapeHtml(result.name)}</h2>
+            <p>${escapeHtml(result.subtitle || '')}</p>
+            <div class="status ${statusClass}">${statusText}</div>
+          </div>
+          <div class="card-body">
+            <div class="price-row">
+              <div>
+                <div class="price-label">Lounaan hinta</div>
+                <div class="price-value">${escapeHtml(result.price || '-')}</div>
+              </div>
+            </div>
+            ${items}
+            <div class="note">
+              <div><strong>Päivä:</strong> ${escapeHtml(todayName || '-')}</div>
+              <div><strong>Lähde:</strong> <a href="${escapeHtml(result.url)}" target="_blank" rel="noreferrer">avaa alkuperäinen sivu</a></div>
+            </div>
+          </div>
+        `;
+        root.appendChild(card);
+      }
+    }
+
+    function getEmbeddedLunchData() {
+      try {
+        const raw = document.getElementById('embedded-lunch-data')?.textContent;
+        return raw ? JSON.parse(raw) : null;
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function renderData(data, debugMessage = '') {
+      const todayLabel = data?.dateLabel || 'ei saatavilla';
+      document.getElementById('today-pill').textContent = `Päivä: ${todayLabel}`;
+      document.getElementById('updated-pill').textContent = `Päivitetty: ${formatUpdatedTime(data?.generatedAt)}`;
+      document.getElementById('debug').textContent = debugMessage || JSON.stringify(data, null, 2);
+      renderCards(Array.isArray(data?.results) ? data.results : [], data?.weekdayName || todayLabel);
+    }
+
+    async function loadLunches() {
+      document.getElementById('today-pill').textContent = 'Päivä: ladataan...';
+      document.getElementById('updated-pill').textContent = 'Päivitetty: ladataan...';
+
+      try {
+        const response = await fetch(`./lunch-data.json?ts=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const data = await response.json();
+        renderData(data);
+      } catch (error) {
+        const fallback = getEmbeddedLunchData();
+        if (fallback) {
+          const extra = location.protocol === 'file:'
+            ? 'Avasit sivun paikallisena tiedostona. Selain estää usein JSON-haun file://-osoitteesta. Julkaistuna GitHub Pagesissa tai paikallisella palvelimella data päivittyy normaalisti.'
+            : `Varsinaisen JSON-tiedoston haku epäonnistui: ${error.message}`;
+          renderData(fallback, extra);
+          return;
+        }
+
+        document.getElementById('today-pill').textContent = 'Päivä: virhe';
+        document.getElementById('updated-pill').textContent = 'Päivitetty: virhe';
+        document.getElementById('debug').textContent = error.message;
+        renderCards([
+          {
+            name: 'Lounasdata puuttuu',
+            subtitle: 'Tarkista että lunch-data.json on olemassa',
+            price: '-',
+            url: '#',
+            items: [],
+            status: 'error',
+            message: error.message
+          }
+        ], '-');
+      }
+    }
+
+    document.getElementById('refresh-button').addEventListener('click', loadLunches);
+    document.getElementById('toggle-debug').addEventListener('click', () => {
+      const el = document.getElementById('debug');
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    });
+
+    loadLunches();
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "generatedAt": null,
+  "dateLabel": "ei vielä päivitetty",
+  "weekdayName": null,
+  "mode": "pending",
+  "results": [
+    {
+      "key": "grillIt",
+      "name": "Grill it! Marina",
+      "subtitle": "Raflaamo",
+      "price": "14,90 €",
+      "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
+      "items": [],
+      "status": "pending",
+      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+    },
+    {
+      "key": "viidesNayttamo",
+      "name": "Viides Näyttämö",
+      "subtitle": "Kulttuuriranta",
+      "price": "13,70 €",
+      "url": "https://www.viidesnayttamo.fi/?page_id=73",
+      "items": [],
+      "status": "pending",
+      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+    },
+    {
+      "key": "aitiopaikka",
+      "name": "Aitiopaikka",
+      "subtitle": "Fresco Ravintolat",
+      "price": "13,50 €",
+      "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
+      "items": [],
+      "status": "pending",
+      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "lounaat",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Automaattisesti päivittyvä lounassivu kolmelle ravintolalle",
+  "scripts": {
+    "update:lunches": "node scripts/update-lunches.js"
+  },
+  "dependencies": {
+    "playwright": "^1.54.2"
+  }
+}
