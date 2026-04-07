@@ -1,8 +1,8 @@
 {
-  "generatedAt": null,
-  "dateLabel": null,
-  "weekdayName": null,
-  "mode": "pending",
+  "generatedAt": "2026-04-07T05:56:21.591Z",
+  "dateLabel": "tiistaina 7.4.2026",
+  "weekdayName": "tiistai",
+  "mode": "automatic",
   "results": [
     {
       "key": "grillIt",
@@ -10,9 +10,17 @@
       "subtitle": "Raflaamo",
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
-      "items": [],
-      "status": "pending",
-      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+      "items": [
+        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja puolukkahilloa",
+        "Paistettua lohta,varhaisperunaa ja hollandaisekastiketta",
+        "Kasvis-soijalasagnea ja yrttiöljyä",
+        "Jälkiruokana: Talon marjarahkaa",
+        "Katkarapuskagen L",
+        "Päivän kala-annos",
+        "Vanilja crème brûlée G"
+      ],
+      "status": "ok",
+      "message": ""
     },
     {
       "key": "viidesNayttamo",
@@ -20,9 +28,13 @@
       "subtitle": "Kulttuuriranta",
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
-      "items": [],
-      "status": "pending",
-      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+      "items": [
+        "tilounas 10,50 €",
+        "Päivän kalaa, kauden kasviksia ja hollandaisekastiketta L,G",
+        "sis. salaattipöydän, talon leipää, kahvin/teen ja pienen makean."
+      ],
+      "status": "ok",
+      "message": ""
     },
     {
       "key": "aitiopaikka",
@@ -30,9 +42,16 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "pending",
-      "message": "Automaattinen haku ei ole vielä ajettu. Käynnistä GitHub Actionsin workflow kerran käsin."
+      "items": [
+        "tiikka-alan kumppaneillemme tietoja siitä, miten käytät sivustoamme. Kumppanimme voivat yhdistää näitä tietoja muihin tietoihin, joita olet antanut heille tai joita on kerätty, kun olet käyttänyt heidän palvelujaan.",
+        "Kiellä",
+        "Salli kaikki",
+        "Näytä tiedot ja muokkaa",
+        "Siirry sisältöön",
+        "Fresco Ravintolat"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
