@@ -189,51 +189,78 @@ function parseViidesNayttamo(text, ctx) {
   ).slice(0, 6);
 }
 
+function isLikelyAitiopaikkaFoodLine(line) {
+  const lower = line.toLowerCase();
+
+  if (lower.includes('aitiopaikan lounaslista')) return false;
+  if (lower.includes('tutustu ravintola')) return false;
+  if (lower.includes('ravintola aitiopaikka')) return false;
+  if (lower.includes('lämminruokalounas')) return false;
+  if (lower.includes('keitto+salaattilounas')) return false;
+  if (lower.includes('lounashinnat')) return false;
+  if (lower.includes('fresco ravintolat')) return false;
+  if (lower.includes('etusivu')) return false;
+  if (/, rauma$/.test(lower) || /, turku$/.test(lower) || /, laitila$/.test(lower)) return false;
+  if (/^kiellä$/i.test(line) || /^salli kaikki$/i.test(line) || /^näytä tiedot ja muokkaa$/i.test(line) || /^siirry sisältöön$/i.test(line)) return false;
+  if (/kumppaneillemme tietoja siitä/i.test(line)) return false;
+  if (/käytät sivustoamme/i.test(line)) return false;
+  if (/yhdistää näitä tietoja muihin tietoihin/i.test(line)) return false;
+  if (/^l\s*=|^m\s*=|^g\s*=|^v\s*=/i.test(line)) return false;
+  if (/^lihojen ja broilerin alkuperämaa/i.test(line)) return false;
+
+  return /,/.test(line) || /\b[LMGV](?:,[LMGV])+$/i.test(line) || /\b[LMGV]$/i.test(line);
+}
+
 function parseAitiopaikka(text, ctx) {
   const lower = text.toLowerCase();
-
   const sectionStart = lower.indexOf('aitiopaikan lounaslista');
   if (sectionStart === -1) return [];
 
   const afterStart = text.slice(sectionStart);
 
-  const endMarkers = [
-    'Tutustu ravintola Aitiopaikkaan',
-    'Ravintola Aitiopaikka',
-    'Lämminruokalounas',
-    'Keitto+Salaattilounas'
+  const dayAnchors = [
+    `${ctx.weekdayName} ${ctx.dateLabel}`.toLowerCase(),
+    `${ctx.weekdayName} ${ctx.day}.${ctx.month}`.toLowerCase(),
+    `${ctx.weekdayName} ${ctx.day}.${ctx.month}.`.toLowerCase(),
+    ctx.weekdayName.toLowerCase()
   ];
 
-  let sectionEnd = afterStart.length;
-  for (const marker of endMarkers) {
-    const idx = afterStart.toLowerCase().indexOf(marker.toLowerCase());
+  let dayStart = -1;
+  const afterStartLower = afterStart.toLowerCase();
+  for (const anchor of dayAnchors) {
+    const idx = afterStartLower.indexOf(anchor);
     if (idx !== -1) {
-      sectionEnd = Math.min(sectionEnd, idx);
+      dayStart = idx;
+      break;
     }
   }
 
-  const lunchSection = afterStart.slice(0, sectionEnd).trim();
-  const block = extractTodayBlock(lunchSection, ctx);
-  if (!block) return [];
+  if (dayStart === -1) return [];
 
-  return dedupe(
-    splitMeaningfulLines(block)
-      .filter((line) => !/^l\s*=|^m\s*=|^g\s*=|^v\s*=/i.test(line))
-      .filter((line) => !/^lihojen ja broilerin alkuperämaa/i.test(line))
-      .filter((line) => !/kumppaneillemme tietoja siitä/i.test(line))
-      .filter((line) => !/käytät sivustoamme/i.test(line))
-      .filter((line) => !/yhdistää näitä tietoja muihin tietoihin/i.test(line))
-      .filter((line) => !/^kiellä$/i.test(line))
-      .filter((line) => !/^salli kaikki$/i.test(line))
-      .filter((line) => !/^näytä tiedot ja muokkaa$/i.test(line))
-      .filter((line) => !/^siirry sisältöön$/i.test(line))
-      .filter((line) => !/^fresco ravintolat$/i.test(line))
-      .filter((line) => !/^lounashinnat$/i.test(line))
-      .filter((line) => !/^etusivu$/i.test(line))
-      .filter((line) => !/, rauma$/i.test(line))
-      .filter((line) => !/, turku$/i.test(line))
-      .filter((line) => !/, laitila$/i.test(line))
-  ).slice(0, 6);
+  const fromDay = afterStart.slice(dayStart);
+
+  const nextDayMarkers = ['maanantai', 'tiistai', 'keskiviikko', 'torstai', 'perjantai']
+    .filter((d) => d !== ctx.weekdayName);
+
+  let endIndex = fromDay.length;
+  for (const marker of nextDayMarkers) {
+    const rx = new RegExp(`\\n\\s*${marker}\\b`, 'i');
+    const match = rx.exec(fromDay.slice(5));
+    if (match) {
+      endIndex = Math.min(endIndex, match.index + 5);
+    }
+  }
+
+  const dayBlock = fromDay.slice(0, endIndex).trim();
+
+  const lines = dayBlock
+    .split(/\n+/)
+    .map((line) => normaliseText(line))
+    .filter(Boolean)
+    .filter((line) => !/^(maanantai|tiistai|keskiviikko|torstai|perjantai)(\s+\d{1,2}\.\d{1,2}\.?)*$/i.test(line))
+    .filter(isLikelyAitiopaikkaFoodLine);
+
+  return dedupe(lines).slice(0, 5);
 }
 
 async function fetchSource(page, source, ctx) {
