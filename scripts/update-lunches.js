@@ -177,6 +177,7 @@ function parseRaflaamo(text, ctx) {
 function parseViidesNayttamo(text, ctx) {
   const block = extractTodayBlock(text, ctx);
   if (!block) return [];
+
   return dedupe(
     splitMeaningfulLines(block)
       .filter((line) => !/^sisältää /i.test(line))
@@ -189,7 +190,30 @@ function parseViidesNayttamo(text, ctx) {
 }
 
 function parseAitiopaikka(text, ctx) {
-  const block = extractTodayBlock(text, ctx);
+  const lower = text.toLowerCase();
+
+  const sectionStart = lower.indexOf('aitiopaikan lounaslista');
+  if (sectionStart === -1) return [];
+
+  const afterStart = text.slice(sectionStart);
+
+  const endMarkers = [
+    'Tutustu ravintola Aitiopaikkaan',
+    'Ravintola Aitiopaikka',
+    'Lämminruokalounas',
+    'Keitto+Salaattilounas'
+  ];
+
+  let sectionEnd = afterStart.length;
+  for (const marker of endMarkers) {
+    const idx = afterStart.toLowerCase().indexOf(marker.toLowerCase());
+    if (idx !== -1) {
+      sectionEnd = Math.min(sectionEnd, idx);
+    }
+  }
+
+  const lunchSection = afterStart.slice(0, sectionEnd).trim();
+  const block = extractTodayBlock(lunchSection, ctx);
   if (!block) return [];
 
   return dedupe(
@@ -206,6 +230,9 @@ function parseAitiopaikka(text, ctx) {
       .filter((line) => !/^fresco ravintolat$/i.test(line))
       .filter((line) => !/^lounashinnat$/i.test(line))
       .filter((line) => !/^etusivu$/i.test(line))
+      .filter((line) => !/, rauma$/i.test(line))
+      .filter((line) => !/, turku$/i.test(line))
+      .filter((line) => !/, laitila$/i.test(line))
   ).slice(0, 6);
 }
 
