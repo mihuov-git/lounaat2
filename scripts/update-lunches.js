@@ -150,12 +150,73 @@ function extractTodayBlock(text, ctx) {
   return rest.slice(0, endIndex).trim();
 }
 
+function isRaflaamoNavigationLine(line) {
+  const lower = line.toLowerCase();
+
+  if (/^keeles\b/i.test(line)) return true;
+  if (/^varaa pöytä$/i.test(line)) return true;
+  if (/^ravintolat$/i.test(line)) return true;
+  if (/^tapahtumat$/i.test(line)) return true;
+  if (/^grill it!?$/i.test(line)) return true;
+  if (/^grill it! marina, turku$/i.test(line)) return true;
+  if (/^raflaamo$/i.test(line)) return true;
+  if (/^marina, turku$/i.test(line)) return true;
+
+  return lower.includes('varaa pöytä') ||
+    lower.includes('grill it! marina, turku') ||
+    lower.includes('ravintolat') ||
+    lower.includes('tapahtumat');
+}
+
 function parseRaflaamo(text, ctx) {
-  const block = extractTodayBlock(text, ctx);
-  if (!block) return [];
+  const lines = text
+    .split(/\n+/)
+    .map((line) => normaliseText(line))
+    .filter(Boolean);
+
+  const dateMatchers = [
+    new RegExp(`^${ctx.weekdayName}\\s+${ctx.day}\\.${ctx.month}\\.?$`, 'i'),
+    new RegExp(`^${ctx.weekdayName}\\s+${ctx.day}\\.${ctx.month}\\.\\d{4}$`, 'i'),
+  ];
+
+  let startLineIndex = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (dateMatchers.some((rx) => rx.test(lines[i]))) {
+      startLineIndex = i;
+      break;
+    }
+  }
+
+  if (startLineIndex === -1) {
+    const block = extractTodayBlock(text, ctx);
+    if (!block) return [];
+    return dedupe(
+      splitMeaningfulLines(block)
+        .filter((line) => !/^lounas[: ]/i.test(line))
+        .filter((line) => !/^lounasmenu$/i.test(line))
+        .filter((line) => !/^lounasmenu\b/i.test(line))
+        .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
+        .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
+        .filter((line) => !/^jälkiruokana:/i.test(line))
+        .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
+        .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
+        .filter((line) => !/^\*+$/.test(line))
+        .filter((line) => !isRaflaamoNavigationLine(line))
+    ).slice(0, 6);
+  }
+
+  let endLineIndex = lines.length;
+  for (let i = startLineIndex + 1; i < lines.length; i++) {
+    if (/^(maanantai|tiistai|keskiviikko|torstai|perjantai)\s+\d{1,2}\.\d{1,2}\.?$/i.test(lines[i])) {
+      endLineIndex = i;
+      break;
+    }
+  }
+
+  const dayLines = lines.slice(startLineIndex + 1, endLineIndex);
 
   return dedupe(
-    splitMeaningfulLines(block)
+    dayLines
       .filter((line) => !/^lounas[: ]/i.test(line))
       .filter((line) => !/^lounasmenu$/i.test(line))
       .filter((line) => !/^lounasmenu\b/i.test(line))
@@ -165,6 +226,7 @@ function parseRaflaamo(text, ctx) {
       .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
       .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
       .filter((line) => !/^\*+$/.test(line))
+      .filter((line) => !isRaflaamoNavigationLine(line))
   ).slice(0, 6);
 }
 
