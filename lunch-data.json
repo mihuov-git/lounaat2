@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08T08:46:27.864Z",
+  "generatedAt": "2026-04-08T12:25:49.661Z",
   "dateLabel": "keskiviikkona 8.4.2026",
   "weekdayName": "keskiviikko",
   "mode": "automatic",
@@ -11,7 +11,12 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Paistettua lohta, kauden perunaa ja hollandaisekastiketta"
+        "keeles (ET)",
+        "Varaa pöytä",
+        "Ravintolat",
+        "Tapahtumat",
+        "Grill it!",
+        "Grill it! Marina, Turku"
       ],
       "status": "ok",
       "message": ""
