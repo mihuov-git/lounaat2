@@ -154,29 +154,18 @@ function parseRaflaamo(text, ctx) {
   const block = extractTodayBlock(text, ctx);
   if (!block) return [];
 
-  const lines = splitMeaningfulLines(block)
-    .filter((line) => !/^lounas[: ]/i.test(line))
-    .filter((line) => !/^lounasmenu$/i.test(line))
-    .filter((line) => !/^lounasmenu\b/i.test(line))
-    .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
-    .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
-    .filter((line) => !/^jälkiruokana:/i.test(line))
-    .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
-    .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
-    .filter((line) => !/^\*+$/.test(line));
-
-  const cleaned = [];
-  for (const line of lines) {
-    if (
-      /^perinteiset/i.test(line) ||
-      /^paistettua/i.test(line) ||
-      /^kasvis-/i.test(line)
-    ) {
-      cleaned.push(line);
-    }
-  }
-
-  return dedupe(cleaned).slice(0, 5);
+  return dedupe(
+    splitMeaningfulLines(block)
+      .filter((line) => !/^lounas[: ]/i.test(line))
+      .filter((line) => !/^lounasmenu$/i.test(line))
+      .filter((line) => !/^lounasmenu\b/i.test(line))
+      .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
+      .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
+      .filter((line) => !/^jälkiruokana:/i.test(line))
+      .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
+      .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
+      .filter((line) => !/^\*+$/.test(line))
+  ).slice(0, 6);
 }
 
 function parseViidesNayttamo(text, ctx) {
