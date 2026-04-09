@@ -1,10 +1,18 @@
 name: Update lunches and deploy Pages
+run-name: Update lunches (${{ github.event_name == 'schedule' && github.event.schedule || 'manual' }})
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 4 * * 1-5'
-    - cron: '5 5 * * 1-5'
+    # GitHub Actions cron is UTC. Staggered away from the top of the hour,
+    # and repeated across the morning so one dropped run does not leave the
+    # site stale for the whole day.
+    - cron: '17 4 * * 1-5' # 07:17 EEST / 06:17 EET
+    - cron: '47 4 * * 1-5' # 07:47 EEST / 06:47 EET
+    - cron: '17 5 * * 1-5' # 08:17 EEST / 07:17 EET
+    - cron: '47 5 * * 1-5' # 08:47 EEST / 07:47 EET
+    - cron: '17 6 * * 1-5' # 09:17 EEST / 08:17 EET
+    - cron: '47 6 * * 1-5' # 09:47 EEST / 08:47 EET
 
 permissions:
   contents: write
@@ -12,13 +20,15 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: update-lunches-pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 20
+    env:
+      TZ: Europe/Helsinki
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,6 +36,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Log trigger context
+        run: |
+          echo "event_name=${{ github.event_name }}"
+          echo "schedule=${{ github.event.schedule || 'manual' }}"
+          echo "utc_now=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          echo "helsinki_now=$(TZ=Europe/Helsinki date +'%Y-%m-%dT%H:%M:%S%z')"
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -50,7 +69,7 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add lunch-data.json
             git commit -m "Update lunch data"
-            git push
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
 
       - name: Setup Pages
