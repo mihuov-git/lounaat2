@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-08T14:11:31.320Z",
-  "dateLabel": "keskiviikkona 8.4.2026",
-  "weekdayName": "keskiviikko",
+  "generatedAt": "2026-04-09T04:57:19.987Z",
+  "dateLabel": "torstaina 9.4.2026",
+  "weekdayName": "torstai",
   "mode": "automatic",
   "results": [
     {
@@ -11,10 +11,10 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon friteerattua kanaa, paprikamajoneesia ja ananassalsaa",
+        "Talon pannupihvi ja tsatsikikastiketta",
         "Hinta:",
         "Paistettua lohta, kauden perunaa ja hollandaisekastiketta",
-        "Korealainen tofuwokki ja kimchimajoneesia",
+        "Kesäkurpitsa-härkispaistos",
         "Asiakasomistajahinta:"
       ],
       "status": "ok",
@@ -27,8 +27,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Lihapullat, herkkusienikastiketta, perunamuusia ja puolukkaa L;G",
-        "Aurajuusto-kukkakaaligratiini ja pinaattia L,G"
+        "Uunilohta, remouladekastiketta ja murskattua perunaa L,G",
+        "Maissipihvit, paahdettua maissia ja pippurimajoneesia Veg,G"
       ],
       "status": "ok",
       "message": ""
@@ -40,9 +40,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Ylikypsää porsaan kassleria ja valkosipuliperunat L,G",
-        "Porkkanaohukaiset L, yrtti-kermaviili L,G, persiljaperunat L,G",
-        "Katkarapukeittoa L,G"
+        "Riistakäristys M,G, perunamuhennos L,G, puolukkahillo",
+        "Savulohilasagnette L",
+        "Pinaattikeittoa L,G"
       ],
       "status": "ok",
       "message": ""
