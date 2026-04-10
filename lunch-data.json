@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T10:17:01.247Z",
+  "generatedAt": "2026-04-10T10:39:59.082Z",
   "dateLabel": "perjantaina 10.4.2026",
   "weekdayName": "perjantai",
   "mode": "automatic",
@@ -27,14 +27,9 @@
       "subtitle": "Kulttuuriranta",
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
-      "items": [
-        "Hoisin härkää ja seesami-kevätsipuliriisiä L,G",
-        "Hoisin herneproteiinisuikaleita ja seesami-kevätsipuliriisiä Veg,G",
-        "L=laktoositon, G=gluteeniton, M=maidoton, Veg=vegaaninen",
-        "Kysy henkilökunnalta lisää allergeeneista."
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "error",
+      "message": "Haku epäonnistui: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.viidesnayttamo.fi/?page_id=73\nCall log:\n  - navigating to \"https://www.viidesnayttamo.fi/?page_id=73\", waiting until \"load\"\n"
     },
     {
       "key": "aitiopaikka",
