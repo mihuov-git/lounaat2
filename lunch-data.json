@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T08:54:59.495Z",
+  "generatedAt": "2026-04-10T08:57:35.815Z",
   "dateLabel": "perjantaina 10.4.2026",
   "weekdayName": "perjantai",
   "mode": "automatic",
@@ -27,9 +27,14 @@
       "subtitle": "Kulttuuriranta",
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Hoisin härkää ja seesami-kevätsipuliriisiä L,G",
+        "Hoisin herneproteiinisuikaleita ja seesami-kevätsipuliriisiä Veg,G",
+        "L=laktoositon, G=gluteeniton, M=maidoton, Veg=vegaaninen",
+        "Kysy henkilökunnalta lisää allergeeneista."
+      ],
+      "status": "ok",
+      "message": ""
     },
     {
       "key": "aitiopaikka",
@@ -37,9 +42,15 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Seesambroileria M,G, mangosalsa M,G, basmatiriisi M,G",
+        "Merimiespihvi M,G, punajuurta ja maustekurkkua",
+        "Bataatti-kookoskeittoa V,M,G",
+        "Kulttuurikuja 1, 20800 Turku",
+        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
