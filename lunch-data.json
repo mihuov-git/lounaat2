@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-09T09:06:15.955Z",
-  "dateLabel": "torstaina 9.4.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-04-10T04:01:17.089Z",
+  "dateLabel": "perjantaina 10.4.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -11,11 +11,12 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon pannupihvi ja tsatsikikastiketta",
+        "Paahdettua broileria ja kermaista pippurikastiketta",
         "Hinta:",
         "Paistettua lohta, kauden perunaa ja hollandaisekastiketta",
-        "Kesäkurpitsa-härkispaistos",
-        "Asiakasomistajahinta:"
+        "Kasvistortelliinit kevätsipuli-papukastikkeessa",
+        "Asiakasomistajahinta:",
+        "VL = vähälaktoosinen, L = laktoositon, G = gluteeniton, GP = gluteeniton pyynnöstä, VE = vegaaninen, VEP = vegaaninen pyynnöstä, T = tulinen, M = maidoton, K = kasvisruoka, PÄ = sisältää pähkinää. Lisätietoja annoksista saat henkilökunnalta. Ruokavirasto suosittelee, että jauhelihapihvit syödään aina täysin kypsennettyinä. Laadukkaassakin medium-kypsennetyssä jauhelihassa voi olla EHEC-bakteereita, jotka voivat aiheuttaa vakavan ruokamyrkytyksen etenkin lapsille ja iäkkäille henkilöille."
       ],
       "status": "ok",
       "message": ""
@@ -27,8 +28,10 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Uunilohta, remouladekastiketta ja murskattua perunaa L,G",
-        "Maissipihvit, paahdettua maissia ja pippurimajoneesia Veg,G"
+        "Hoisin härkää ja seesami-kevätsipuliriisiä L,G",
+        "Hoisin herneproteiinisuikaleita ja seesami-kevätsipuliriisiä Veg,G",
+        "L=laktoositon, G=gluteeniton, M=maidoton, Veg=vegaaninen",
+        "Kysy henkilökunnalta lisää allergeeneista."
       ],
       "status": "ok",
       "message": ""
@@ -40,9 +43,11 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Riistakäristys M,G, perunamuhennos L,G, puolukkahillo",
-        "Savulohilasagnette L",
-        "Pinaattikeittoa L,G"
+        "Seesambroileria M,G, mangosalsa M,G, basmatiriisi M,G",
+        "Merimiespihvi M,G, punajuurta ja maustekurkkua",
+        "Bataatti-kookoskeittoa V,M,G",
+        "Kulttuurikuja 1, 20800 Turku",
+        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
       ],
       "status": "ok",
       "message": ""
