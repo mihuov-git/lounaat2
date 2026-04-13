@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-10T10:39:59.082Z",
-  "dateLabel": "perjantaina 10.4.2026",
-  "weekdayName": "perjantai",
+  "generatedAt": "2026-04-13T03:25:48.562Z",
+  "dateLabel": "maanantaina 13.4.2026",
+  "weekdayName": "maanantai",
   "mode": "automatic",
   "results": [
     {
@@ -11,12 +11,11 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Paahdettua broileria ja kermaista pippurikastiketta",
+        "Ylikypsää Teriyaki-possua ja lime-jogurttikastiketta",
         "Hinta:",
-        "Paistettua lohta, kauden perunaa ja hollandaisekastiketta",
-        "Kasvistortelliinit kevätsipuli-papukastikkeessa",
-        "Asiakasomistajahinta:",
-        "VL = vähälaktoosinen, L = laktoositon, G = gluteeniton, GP = gluteeniton pyynnöstä, VE = vegaaninen, VEP = vegaaninen pyynnöstä, T = tulinen, M = maidoton, K = kasvisruoka, PÄ = sisältää pähkinää. Lisätietoja annoksista saat henkilökunnalta. Ruokavirasto suosittelee, että jauhelihapihvit syödään aina täysin kypsennettyinä. Laadukkaassakin medium-kypsennetyssä jauhelihassa voi olla EHEC-bakteereita, jotka voivat aiheuttaa vakavan ruokamyrkytyksen etenkin lapsille ja iäkkäille henkilöille."
+        "Paistettua puna-ahventa, äyriäiskastiketta ja tilliperunoita",
+        "Tofu-kasviscurrya ja suolapähkinöitä",
+        "Asiakasomistajahinta:"
       ],
       "status": "ok",
       "message": ""
@@ -28,8 +27,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [],
-      "status": "error",
-      "message": "Haku epäonnistui: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.viidesnayttamo.fi/?page_id=73\nCall log:\n  - navigating to \"https://www.viidesnayttamo.fi/?page_id=73\", waiting until \"load\"\n"
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     },
     {
       "key": "aitiopaikka",
@@ -38,11 +37,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Seesambroileria M,G, mangosalsa M,G, basmatiriisi M,G",
-        "Merimiespihvi M,G, punajuurta ja maustekurkkua",
-        "Bataatti-kookoskeittoa V,M,G",
-        "Kulttuurikuja 1, 20800 Turku",
-        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
+        "Smetana-kaalikääryleet L,G, perunamuhennos L,G, puolukkahillo",
+        "Pippuripossua L,G, riisi M,G",
+        "Itämaista kookos-kasviskeittoa M,G"
       ],
       "status": "ok",
       "message": ""
