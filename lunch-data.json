@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:45:35.448Z",
+  "generatedAt": "2026-04-13T10:24:33.959Z",
   "dateLabel": "maanantaina 13.4.2026",
   "weekdayName": "maanantai",
   "mode": "automatic",
@@ -26,9 +26,12 @@
       "subtitle": "Kulttuuriranta",
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Kanaa tikka masala, kurkumariisiä ja kurkkuraitaa L,G",
+        "Tofua tikka masala, kurkumariisiä ja kurkkuraitaa Veg,G"
+      ],
+      "status": "ok",
+      "message": ""
     },
     {
       "key": "aitiopaikka",
