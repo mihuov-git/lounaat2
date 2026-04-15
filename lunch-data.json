@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-14T10:49:54.465Z",
-  "dateLabel": "tiistaina 14.4.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-04-15T03:54:27.179Z",
+  "dateLabel": "keskiviikkona 15.4.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -11,10 +11,10 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon friteerattua kanaa ja curry-srirachamajoneesia",
+        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja puolukkahilloa",
         "Hinta:",
         "Paistettua puna-ahventa, äyriäiskastiketta ja tilliperunoita",
-        "Kasvis-fetajuustopaistos",
+        "Tomaattinen soija-uunipasta",
         "Asiakasomistajahinta:"
       ],
       "status": "ok",
@@ -27,8 +27,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Pulled pork BBQ, bataattilohkoja ja aiolia L,G",
-        "Feta-kasvispihvejä, aurinkokuivattuja tomaatteja ja rucolaa L,G"
+        "Lindströmin pihvit, kermainen sipulikastike, perunamuusia L,G",
+        "Halloumipunajuuripihvit ja salsa verde L,G"
       ],
       "status": "ok",
       "message": ""
@@ -40,9 +40,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Kanaa Choron kastikkeessa L,G, pilahviriisi M,G",
-        "Härkis kasvis-kaalilaatikko L,G, puolukkahillo",
-        "Kermaista lohikeittoa L,G"
+        "Karitsan mureketta timjamikastikkeessa L,G, perunamuhennos L,G",
+        "Paahdettua lohta M,G, remoulademajoneesi M,G, tilliperunat L,G",
+        "Savupaprikakeittoa L,G"
       ],
       "status": "ok",
       "message": ""
