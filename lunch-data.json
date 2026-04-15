@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T10:02:55.755Z",
+  "generatedAt": "2026-04-15T10:40:25.918Z",
   "dateLabel": "keskiviikkona 15.4.2026",
   "weekdayName": "keskiviikko",
   "mode": "automatic",
@@ -26,12 +26,9 @@
       "subtitle": "Kulttuuriranta",
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
-      "items": [
-        "Lindströmin pihvit, kermainen sipulikastike, perunamuusia L,G",
-        "Halloumipunajuuripihvit ja salsa verde L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     },
     {
       "key": "aitiopaikka",
@@ -39,13 +36,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Karitsan mureketta timjamikastikkeessa L,G, perunamuhennos L,G",
-        "Paahdettua lohta M,G, remoulademajoneesi M,G, tilliperunat L,G",
-        "Savupaprikakeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
