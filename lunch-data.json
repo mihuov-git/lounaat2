@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-16T10:58:33.725Z",
-  "dateLabel": "torstaina 16.4.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-04-17T03:42:39.154Z",
+  "dateLabel": "perjantaina 17.4.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -11,11 +11,12 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Parmesanjuustolla kuorrutettua yrtti-tomaattibroileria",
+        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
         "Hinta:",
         "Paistettua puna-ahventa, äyriäiskastiketta ja tilliperunoita",
-        "Munakoiso-linssipaistosta",
-        "Asiakasomistajahinta:"
+        "Chili-härkiswokkia ja paahdettuja suolapähkinöitä",
+        "Asiakasomistajahinta:",
+        "VL = vähälaktoosinen, L = laktoositon, G = gluteeniton, GP = gluteeniton pyynnöstä, VE = vegaaninen, VEP = vegaaninen pyynnöstä, T = tulinen, M = maidoton, K = kasvisruoka, PÄ = sisältää pähkinää. Lisätietoja annoksista saat henkilökunnalta. Ruokavirasto suosittelee, että jauhelihapihvit syödään aina täysin kypsennettyinä. Laadukkaassakin medium-kypsennetyssä jauhelihassa voi olla EHEC-bakteereita, jotka voivat aiheuttaa vakavan ruokamyrkytyksen etenkin lapsille ja iäkkäille henkilöille."
       ],
       "status": "ok",
       "message": ""
@@ -27,8 +28,10 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Paneroitua kampelaa, tartarkastiketta ja tillivoi-perunaa L,G",
-        "Uunibataattia, fetaa ja salsaa L,G"
+        "Härän rintaa, tummaa rosmariinikastiketta ja lohkoperunoita L,G",
+        "Kasvisgnocchipelti ja mozzarellajuustoa L",
+        "L=laktoositon, G=gluteeniton, M=maidoton, Veg=vegaaninen",
+        "Kysy henkilökunnalta lisää allergeeneista."
       ],
       "status": "ok",
       "message": ""
@@ -40,9 +43,11 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Kanaa kormakastikkeessa L,G basmatiriisi M,G",
-        "Kinkku-ananaspizza L ja tomaatti-mozzarellapizza L",
-        "Jauhelihakeittoa M,G"
+        "Metsästäjän porsaanpaistia L,G, perunamuhennos L,G",
+        "Perinteiset silakkapihvit L, ruohosipulikermaviili L,G",
+        "Porkkanasosekeittoa L,G",
+        "Kulttuurikuja 1, 20800 Turku",
+        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
       ],
       "status": "ok",
       "message": ""
