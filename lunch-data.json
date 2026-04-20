@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-17T10:40:49.348Z",
-  "dateLabel": "perjantaina 17.4.2026",
-  "weekdayName": "perjantai",
+  "generatedAt": "2026-04-20T04:27:13.743Z",
+  "dateLabel": "maanantaina 20.4.2026",
+  "weekdayName": "maanantai",
   "mode": "automatic",
   "results": [
     {
@@ -11,12 +11,11 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
+        "Talon jauhelihapihvit ja aurajuusto-kermaviilikastiketta",
         "Hinta:",
-        "Paistettua puna-ahventa, äyriäiskastiketta ja tilliperunoita",
-        "Chili-härkiswokkia ja paahdettuja suolapähkinöitä",
-        "Asiakasomistajahinta:",
-        "VL = vähälaktoosinen, L = laktoositon, G = gluteeniton, GP = gluteeniton pyynnöstä, VE = vegaaninen, VEP = vegaaninen pyynnöstä, T = tulinen, M = maidoton, K = kasvisruoka, PÄ = sisältää pähkinää. Lisätietoja annoksista saat henkilökunnalta. Ruokavirasto suosittelee, että jauhelihapihvit syödään aina täysin kypsennettyinä. Laadukkaassakin medium-kypsennetyssä jauhelihassa voi olla EHEC-bakteereita, jotka voivat aiheuttaa vakavan ruokamyrkytyksen etenkin lapsille ja iäkkäille henkilöille."
+        "Paistettua kirjolohta, sitruunacremeä ja paahdettua yrttiperunaa",
+        "Mustapapu-linssipataa ja paahdettuja kikherneitä",
+        "Asiakasomistajahinta:"
       ],
       "status": "ok",
       "message": ""
@@ -28,10 +27,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Härän rintaa, tummaa rosmariinikastiketta ja lohkoperunoita L,G",
-        "Kasvisgnocchipelti ja mozzarellajuustoa L",
-        "L=laktoositon, G=gluteeniton, M=maidoton, Veg=vegaaninen",
-        "Kysy henkilökunnalta lisää allergeeneista."
+        "Satay kanaa ja kevätsipuliriisiä L,G",
+        "Satay tofua, kasviksia ja kevätsipuliriisiä Veg,G"
       ],
       "status": "ok",
       "message": ""
@@ -43,11 +40,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Metsästäjän porsaanpaistia L,G, perunamuhennos L,G",
-        "Perinteiset silakkapihvit L, ruohosipulikermaviili L,G",
-        "Porkkanasosekeittoa L,G",
-        "Kulttuurikuja 1, 20800 Turku",
-        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
+        "Pasta Carbonara L, parmesan",
+        "Kana Curry M,G, basmatiriisi M,G",
+        "Kermaista bataattikeittoa L,G"
       ],
       "status": "ok",
       "message": ""
