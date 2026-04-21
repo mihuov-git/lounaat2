@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-20T11:53:08.583Z",
-  "dateLabel": "maanantaina 20.4.2026",
-  "weekdayName": "maanantai",
+  "generatedAt": "2026-04-21T03:54:12.020Z",
+  "dateLabel": "tiistaina 21.4.2026",
+  "weekdayName": "tiistai",
   "mode": "automatic",
   "results": [
     {
@@ -11,10 +11,10 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon jauhelihapihvit ja aurajuusto-kermaviilikastiketta",
+        "Bearnaise-uunibroileria",
         "Hinta:",
         "Paistettua kirjolohta, sitruunacremeä ja paahdettua yrttiperunaa",
-        "Mustapapu-linssipataa ja paahdettuja kikherneitä",
+        "Kasvis-soijalasagnea",
         "Asiakasomistajahinta:"
       ],
       "status": "ok",
@@ -27,8 +27,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Satay kanaa ja kevätsipuliriisiä L,G",
-        "Satay tofua, kasviksia ja kevätsipuliriisiä Veg,G"
+        "Porsaan lehtipihvi, maustevoita ja ranskalaisia L,G",
+        "Kasvispihvit ja salsaa Veg,G"
       ],
       "status": "ok",
       "message": ""
@@ -40,9 +40,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Pasta Carbonara L, parmesan",
-        "Kana Curry M,G, basmatiriisi M,G",
-        "Kermaista bataattikeittoa L,G"
+        "Karjalanpaistia M,G, perunamuhennos L,G, puolukkahillo",
+        "Uuniperunat M,G, feta-kasvis- ja tonnikalatäyte L,G",
+        "Meksikolaista kanakeittoa M,G"
       ],
       "status": "ok",
       "message": ""
