@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-23T10:58:53.654Z",
-  "dateLabel": "torstaina 23.4.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-04-24T05:09:10.259Z",
+  "dateLabel": "perjantaina 24.4.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -11,11 +11,12 @@
       "price": "14,90 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon friteerattua kanaa, paprikamajoneesia ja ananassalsaa",
+        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja puolukkahilloa",
         "Hinta:",
         "Paistettua kirjolohta, sitruunacremeä ja paahdettua yrttiperunaa",
-        "Kesäkurpitsa-härkispaistos",
-        "Asiakasomistajahinta:"
+        "Kasvistortelliinit kevätsipuli-papukastikkeessa",
+        "Asiakasomistajahinta:",
+        "VL = vähälaktoosinen, L = laktoositon, G = gluteeniton, GP = gluteeniton pyynnöstä, VE = vegaaninen, VEP = vegaaninen pyynnöstä, T = tulinen, M = maidoton, K = kasvisruoka, PÄ = sisältää pähkinää. Lisätietoja annoksista saat henkilökunnalta. Ruokavirasto suosittelee, että jauhelihapihvit syödään aina täysin kypsennettyinä. Laadukkaassakin medium-kypsennetyssä jauhelihassa voi olla EHEC-bakteereita, jotka voivat aiheuttaa vakavan ruokamyrkytyksen etenkin lapsille ja iäkkäille henkilöille."
       ],
       "status": "ok",
       "message": ""
@@ -27,8 +28,10 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Paahdettua lohta, smetanakastiketta ja perunamuusia L",
-        "Pinaattiletut ja puolukkaa L"
+        "Burger buffa L",
+        "Saatavana Veg, G",
+        "L=laktoositon, G=gluteeniton, M=maidoton, Veg=vegaaninen",
+        "Kysy henkilökunnalta lisää allergeeneista."
       ],
       "status": "ok",
       "message": ""
@@ -40,9 +43,11 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Olivian kanaa L,G, riisi M,G",
-        "Jauhelihalasagne L",
-        "Palsternakkasosekeittoa L,G"
+        "Porsaan paistia BBQ-kastikkeessa M,G, kermaperunat L,G",
+        "Pinaattiohukaiset L, puolukkahillo, perunaa L,G",
+        "Kookos-katkarapukeitto M,G",
+        "Kulttuurikuja 1, 20800 Turku",
+        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
       ],
       "status": "ok",
       "message": ""
