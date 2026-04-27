@@ -4,15 +4,25 @@ run-name: Update lunches (${{ github.event_name == 'schedule' && github.event.sc
 on:
   workflow_dispatch:
   schedule:
-    # GitHub Actions cron is UTC. Staggered away from the top of the hour,
-    # and repeated across the morning so one dropped run does not leave the
-    # site stale for the whole day.
-    - cron: '17 4 * * 1-5' # 07:17 EEST / 06:17 EET
-    - cron: '47 4 * * 1-5' # 07:47 EEST / 06:47 EET
-    - cron: '17 5 * * 1-5' # 08:17 EEST / 07:17 EET
-    - cron: '47 5 * * 1-5' # 08:47 EEST / 07:47 EET
-    - cron: '17 6 * * 1-5' # 09:17 EEST / 08:17 EET
-    - cron: '47 6 * * 1-5' # 09:47 EEST / 08:47 EET
+    # GitHub Actions cron uses UTC.
+    #
+    # Goal:
+    # - lunch data should be updated on the site by 08:00 Europe/Helsinki
+    # - run once more around 10:00 Europe/Helsinki as a safety refresh
+    #
+    # Helsinki time:
+    # - winter: 04:12, 05:12, 06:12, 07:12, 08:12, 09:12, 10:12
+    # - summer: 05:12, 06:12, 07:12, 08:12, 09:12, 10:12
+    #
+    # Multiple early runs make the update resilient to delayed/dropped GitHub
+    # scheduled runs. The 10-ish run refreshes data once more if source pages
+    # publish their menus later in the morning.
+    - cron: '12 2 * * 1-5'
+    - cron: '12 3 * * 1-5'
+    - cron: '12 4 * * 1-5'
+    - cron: '12 5 * * 1-5'
+    - cron: '12 6 * * 1-5'
+    - cron: '12 7 * * 1-5'
 
 permissions:
   contents: write
@@ -46,21 +56,41 @@ jobs:
           echo "utc_now=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
           echo "helsinki_now=$(TZ=Europe/Helsinki date +'%Y-%m-%dT%H:%M:%S%z')"
 
+      - name: Guard against late scheduled runs
+        id: timing
+        run: |
+          helsinki_hour=$(TZ=Europe/Helsinki date +'%H')
+          echo "helsinki_hour=$helsinki_hour"
+
+          # Scheduled runs are allowed through 10:59 Europe/Helsinki.
+          # Manual workflow_dispatch runs are always allowed.
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$helsinki_hour" -ge 11 ]; then
+            echo "should_update=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping scheduled lunch update after 11:00 Europe/Helsinki."
+          else
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Setup Node
+        if: steps.timing.outputs.should_update == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install dependencies
+        if: steps.timing.outputs.should_update == 'true'
         run: npm install
 
       - name: Install Playwright browser
+        if: steps.timing.outputs.should_update == 'true'
         run: npx playwright install --with-deps chromium
 
       - name: Update lunch data
+        if: steps.timing.outputs.should_update == 'true'
         run: npm run update:lunches
 
       - name: Commit updated lunch data
+        if: steps.timing.outputs.should_update == 'true'
         run: |
           if git diff --quiet -- lunch-data.json; then
             echo "No changes to commit"
