@@ -1,3 +1,6 @@
+Tässä koko päivitetty `scripts/update-lunches.js`:
+
+```js id="kwhvra"
 const fs = require('fs/promises');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -16,7 +19,7 @@ const sources = [
     key: 'grillIt',
     name: 'Grill it! Marina',
     subtitle: 'Raflaamo',
-    price: '14,90 €',
+    price: '14,80 €',
     url: 'https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas',
     parser: parseRaflaamo,
   },
@@ -168,6 +171,56 @@ function isRaflaamoNavigationLine(line) {
     lower.includes('tapahtumat');
 }
 
+const GRILL_IT_TARGET_PRICE_RX = /\b14\s*[,.]\s*80\s*€/i;
+
+function isPriceLine(line) {
+  return /\b\d{1,2}\s*[,.]\s*\d{2}\s*€/i.test(line);
+}
+
+function isRaflaamoPriceLabelLine(line) {
+  return /^hinta:?$/i.test(line) || /^asiakasomistajahinta:?$/i.test(line);
+}
+
+function isRaflaamoNonFoodLine(line) {
+  return /^lounas[: ]/i.test(line) ||
+    /^lounasmenu$/i.test(line) ||
+    /^lounasmenu\b/i.test(line) ||
+    /^lisäkkeenä tarjoilemme/i.test(line) ||
+    /^jälkiruokana:/i.test(line) ||
+    /^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line) ||
+    /^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line) ||
+    /^\*+$/.test(line) ||
+    isRaflaamoNavigationLine(line);
+}
+
+function extractRaflaamoTargetPriceItems(dayLines) {
+  const items = [];
+  let currentItemLines = [];
+
+  for (const line of dayLines.map((item) => normaliseText(item)).filter(Boolean)) {
+    if (isRaflaamoNonFoodLine(line)) {
+      continue;
+    }
+
+    if (isRaflaamoPriceLabelLine(line)) {
+      continue;
+    }
+
+    if (isPriceLine(line)) {
+      if (GRILL_IT_TARGET_PRICE_RX.test(line) && currentItemLines.length) {
+        items.push(currentItemLines.join(' '));
+      }
+
+      currentItemLines = [];
+      continue;
+    }
+
+    currentItemLines.push(line);
+  }
+
+  return dedupe(items).slice(0, 6);
+}
+
 function parseRaflaamo(text, ctx) {
   const lines = text
     .split(/\n+/)
@@ -190,19 +243,8 @@ function parseRaflaamo(text, ctx) {
   if (startLineIndex === -1) {
     const block = extractTodayBlock(text, ctx);
     if (!block) return [];
-    return dedupe(
-      splitMeaningfulLines(block)
-        .filter((line) => !/^lounas[: ]/i.test(line))
-        .filter((line) => !/^lounasmenu$/i.test(line))
-        .filter((line) => !/^lounasmenu\b/i.test(line))
-        .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
-        .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
-        .filter((line) => !/^jälkiruokana:/i.test(line))
-        .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
-        .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
-        .filter((line) => !/^\*+$/.test(line))
-        .filter((line) => !isRaflaamoNavigationLine(line))
-    ).slice(0, 6);
+
+    return extractRaflaamoTargetPriceItems(splitMeaningfulLines(block));
   }
 
   let endLineIndex = lines.length;
@@ -215,19 +257,7 @@ function parseRaflaamo(text, ctx) {
 
   const dayLines = lines.slice(startLineIndex + 1, endLineIndex);
 
-  return dedupe(
-    dayLines
-      .filter((line) => !/^lounas[: ]/i.test(line))
-      .filter((line) => !/^lounasmenu$/i.test(line))
-      .filter((line) => !/^lounasmenu\b/i.test(line))
-      .filter((line) => !/^\d{1,2},\d{2}\s*€/.test(line))
-      .filter((line) => !/^lisäkkeenä tarjoilemme/i.test(line))
-      .filter((line) => !/^jälkiruokana:/i.test(line))
-      .filter((line) => !/^(katkarapuskagen|päivän kala-annos|vanilja)/i.test(line))
-      .filter((line) => !/^(g|l|vl|ve|m|gp|vep)(\s+(g|l|vl|ve|m|gp|vep))*$/i.test(line))
-      .filter((line) => !/^\*+$/.test(line))
-      .filter((line) => !isRaflaamoNavigationLine(line))
-  ).slice(0, 6);
+  return extractRaflaamoTargetPriceItems(dayLines);
 }
 
 function parseViidesNayttamo(text, ctx) {
@@ -495,3 +525,4 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
+```
