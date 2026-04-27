@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T05:53:50.021Z",
+  "generatedAt": "2026-04-27T06:05:23.212Z",
   "dateLabel": "maanantaina 27.4.2026",
   "weekdayName": "maanantai",
   "mode": "automatic",
@@ -8,14 +8,11 @@
       "key": "grillIt",
       "name": "Grill it! Marina",
       "subtitle": "Raflaamo",
-      "price": "14,90 €",
+      "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
         "Kievinkanaa ja sitruunamajoneesia",
-        "Hinta:",
-        "Paistettua puna-ahventa, paahdettuja lohkoperunoita ja ruohosipulicremeä",
-        "Tofu-kasviscurrya ja suolapähkinöitä",
-        "Asiakasomistajahinta:"
+        "Tofu-kasviscurrya ja suolapähkinöitä"
       ],
       "status": "ok",
       "message": ""
