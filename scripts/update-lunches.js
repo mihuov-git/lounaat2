@@ -1,6 +1,3 @@
-Tässä koko päivitetty `scripts/update-lunches.js`:
-
-```js id="kwhvra"
 const fs = require('fs/promises');
 const path = require('path');
 const { chromium } = require('playwright');
