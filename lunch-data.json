@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-27T06:05:23.212Z",
-  "dateLabel": "maanantaina 27.4.2026",
-  "weekdayName": "maanantai",
+  "generatedAt": "2026-04-28T05:16:48.306Z",
+  "dateLabel": "tiistaina 28.4.2026",
+  "weekdayName": "tiistai",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Kievinkanaa ja sitruunamajoneesia",
-        "Tofu-kasviscurrya ja suolapähkinöitä"
+        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
+        "Kasvis-fetajuustopaistos PÄ"
       ],
       "status": "ok",
       "message": ""
@@ -24,8 +24,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Lyonin kanaa ja pilahviriisiä L,G",
-        "Lyonin tofua ja pilahviriisiä Veg,G"
+        "Lihapullia tomaattikastikkeessa ja paahdettua perunaa L,G",
+        "Falafelpyörykät tomaattikastikkeessa ja paahdettua perunaa Veg,G"
       ],
       "status": "ok",
       "message": ""
@@ -37,9 +37,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Hawajin kanaa ja bearnaisekastiketta L,G, riisi M,G",
-        "Pasta Caponata M, parmesan",
-        "Thai-kalakeitto M,G"
+        "Makkarapihvit L,G, persikkamajoneesi M,G, perunamuhennos L,G",
+        "Broilerkiusaus L,G, mustaherukkahillo",
+        "Tryffelöityä kukkakaalikeittoa L,G"
       ],
       "status": "ok",
       "message": ""
