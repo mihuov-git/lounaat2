@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-28T05:16:48.306Z",
-  "dateLabel": "tiistaina 28.4.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-04-29T05:22:46.834Z",
+  "dateLabel": "keskiviikkona 29.4.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
-        "Kasvis-fetajuustopaistos PÄ"
+        "Mausteista tandoorikanaa ja minttu-jogurttikastiketta",
+        "Tomaattinen soijabolognese ja pennepastaa"
       ],
       "status": "ok",
       "message": ""
@@ -24,8 +24,8 @@
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
       "items": [
-        "Lihapullia tomaattikastikkeessa ja paahdettua perunaa L,G",
-        "Falafelpyörykät tomaattikastikkeessa ja paahdettua perunaa Veg,G"
+        "Porsaan ulkofileetä, hollandaisekastiketta ja maalaislohkoperunoita L,G",
+        "Mustapapupihvejä ja chipotlemajoneesia Veg,G"
       ],
       "status": "ok",
       "message": ""
@@ -37,9 +37,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Makkarapihvit L,G, persikkamajoneesi M,G, perunamuhennos L,G",
-        "Broilerkiusaus L,G, mustaherukkahillo",
-        "Tryffelöityä kukkakaalikeittoa L,G"
+        "Karkkipossua M,G, valkosipuliperunat L,G",
+        "Panko kuorrutettua kalaa L, pestokermaviili L,G, tilliperunat L,G",
+        "Juuressosekeittoa L,G"
       ],
       "status": "ok",
       "message": ""
