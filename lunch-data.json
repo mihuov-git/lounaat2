@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-29T05:22:46.834Z",
-  "dateLabel": "keskiviikkona 29.4.2026",
-  "weekdayName": "keskiviikko",
+  "generatedAt": "2026-04-30T04:12:57.145Z",
+  "dateLabel": "torstaina 30.4.2026",
+  "weekdayName": "torstai",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Mausteista tandoorikanaa ja minttu-jogurttikastiketta",
-        "Tomaattinen soijabolognese ja pennepastaa"
+        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja karpalohilloa",
+        "Munakoiso-linssipaistosta"
       ],
       "status": "ok",
       "message": ""
@@ -23,12 +23,9 @@
       "subtitle": "Kulttuuriranta",
       "price": "13,70 €",
       "url": "https://www.viidesnayttamo.fi/?page_id=73",
-      "items": [
-        "Porsaan ulkofileetä, hollandaisekastiketta ja maalaislohkoperunoita L,G",
-        "Mustapapupihvejä ja chipotlemajoneesia Veg,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "error",
+      "message": "Haku epäonnistui: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.viidesnayttamo.fi/?page_id=73\nCall log:\n  - navigating to \"https://www.viidesnayttamo.fi/?page_id=73\", waiting until \"load\"\n"
     },
     {
       "key": "aitiopaikka",
@@ -37,9 +34,8 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Karkkipossua M,G, valkosipuliperunat L,G",
-        "Panko kuorrutettua kalaa L, pestokermaviili L,G, tilliperunat L,G",
-        "Juuressosekeittoa L,G"
+        "mm. savustettua lohta, paahdettua kanaa, lihapullia,",
+        "perunasalaattia, coleslaw-salaattia, munan puolikkaita, marinoituja oliiveja jne."
       ],
       "status": "ok",
       "message": ""
