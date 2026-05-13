@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-12T06:48:15.890Z",
-  "dateLabel": "tiistaina 12.5.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-05-13T05:57:33.192Z",
+  "dateLabel": "keskiviikkona 13.5.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon friteerattua kanaa ja curry-srirachamajoneesia",
-        "Kasvis-fetajuustopaistos PÄ"
+        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja puolukkahilloa",
+        "Tomaattinen soijabolognese ja pennepastaa"
       ],
       "status": "ok",
       "message": ""
@@ -34,9 +34,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Lohta fenkoli-valkoviinikastikkeessa L,G, tilliperunat L,G",
-        "Kuorrutettua uunimakkaraa L,G, perunamuhennos L,G",
-        "Paahdettua tomaattikeittoa M,G"
+        "Kalkkunaa mustaherukkakastikkeessa M,G, riisi M,G",
+        "Riistakiusaus L,G, puolukkahillo",
+        "Kookos-kasviskeittoa M,G"
       ],
       "status": "ok",
       "message": ""
