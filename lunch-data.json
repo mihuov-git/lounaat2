@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-13T07:28:24.830Z",
-  "dateLabel": "keskiviikkona 13.5.2026",
-  "weekdayName": "keskiviikko",
+  "generatedAt": "2026-05-14T05:56:35.721Z",
+  "dateLabel": "torstaina 14.5.2026",
+  "weekdayName": "torstai",
   "mode": "automatic",
   "results": [
     {
@@ -10,12 +10,9 @@
       "subtitle": "Raflaamo",
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
-      "items": [
-        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja puolukkahilloa",
-        "Tomaattinen soijabolognese ja pennepastaa"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     },
     {
       "key": "viidesNayttamo",
@@ -33,13 +30,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Kalkkunaa mustaherukkakastikkeessa M,G, riisi M,G",
-        "Riistakiusaus L,G, puolukkahillo",
-        "Kookos-kasviskeittoa M,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
