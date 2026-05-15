@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-14T06:53:50.006Z",
-  "dateLabel": "torstaina 14.5.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-05-15T06:03:46.589Z",
+  "dateLabel": "perjantaina 15.5.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -10,9 +10,13 @@
       "subtitle": "Raflaamo",
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
+        "Chili-härkiswokkia ja paahdettuja suolapähkinöitä",
+        "Ravintolaan on pääsy pyörätuolilla Meillä käy S-Card Anna palautetta Facebook Avautuu uuteen välilehteen Instagram Avautuu uuteen välilehteen AUKIOLOAJAT Aukioloajat Grill it! Marina RAVINTOLAKETJUT Ota yhteyttä Myyntipalvelu, pääkaupunkiseutu 0300 870 020 (arkisin klo 8.30-16.30) 51 snt/min + pvm/mpm Myyntipalveluiden yhteystiedot, koko Suomi Asiakasomistajapalvelu 010 76 5858 (arkisin klo 9-16) pvm/mpm Palaute Lähetä palautetta sivustosta Avautuu uuteen välilehteen Raflaamo.fi Lounas Saavutettavuus Avautuu uuteen välilehteen Muuta evästeasetuksia Yleiset tiedot Bonusta Applen Lompakolla Lahjakortit Avautuu uuteen välilehteen Medialle Tietosuoja Oiva-raportit Avautuu uuteen välilehteen Työpaikat Avautuu uuteen välilehteen Etsi ja varaa tiloja Avautuu uuteen välilehteen Sokoshotels.fi Avautuu uuteen välilehteen SOK Matkailu- & ravitsemiskaupan ketjuohjaus SOK PL 1 00088 S-RYHMÄ, Y-tunnus 0116323-1 Siirry pääsisältöön Ruoat ja juomat –15 % S-mobiilin kupongilla. Kirjaudu Hae Avaa mobiilivalikko … … Kirjaudu Hae Suomeksi (FI) På svenska (SV) In English (EN) Eesti keeles (ET) … … Esittely Ruokalista Juhlat ja kokoukset Ruokalistamme Ruokalistamme Ruokalistamme Lounas Ruokalista S-Etukortilla edullisesti Lapsille Menut Viinit ja drinkit Juhlakauden menut 9.9.–13.4. TOK 125 -menu Parsamenu 8.4.-24.5. 20 21 22 Perjantai 15.5. Perjantai 15.5. Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja"
+      ],
+      "status": "ok",
+      "message": ""
     },
     {
       "key": "viidesNayttamo",
@@ -30,9 +34,15 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Porsaan ulkofilettä madeirakastikkeessa M,G, paahdettua perunaa M,G",
+        "Grillattua broilerin koipea ja maissia M,G, aioli M,G",
+        "Kermaista lohikeittoa L,G",
+        "Kulttuurikuja 1, 20800 Turku",
+        "13,50 €"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
