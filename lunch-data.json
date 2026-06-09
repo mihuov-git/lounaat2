@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T06:18:49.143Z",
+  "generatedAt": "2026-06-09T06:57:30.440Z",
   "dateLabel": "tiistaina 9.6.2026",
   "weekdayName": "tiistai",
   "mode": "automatic",
@@ -33,13 +33,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Bolognese M,G, pastaa M, parmesan",
-        "Smetanaisia kasvis-kaalikääryleitä L,G, persiljaperunat L,G",
-        "Kermaista lohikeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
