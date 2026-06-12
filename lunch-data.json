@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-11T07:03:22.233Z",
-  "dateLabel": "torstaina 11.6.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-06-12T06:55:03.846Z",
+  "dateLabel": "perjantaina 12.6.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,9 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Parmesanjuustolla kuorrutettua yrtti-tomaattibroileria",
-        "Munakoiso-linssipaistosta"
+        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
+        "Chili-härkiswokkia ja paahdettuja suolapähkinöitä",
+        "Ravintolaan on pääsy pyörätuolilla Meillä käy S-Card Anna palautetta Facebook Avautuu uuteen välilehteen Instagram Avautuu uuteen välilehteen AUKIOLOAJAT Aukioloajat Grill it! Marina RAVINTOLAKETJUT Ota yhteyttä Myyntipalvelu, pääkaupunkiseutu 0300 870 020 (arkisin klo 8.30-16.30) 51 snt/min + pvm/mpm Myyntipalveluiden yhteystiedot, koko Suomi Asiakasomistajapalvelu 010 76 5858 (arkisin klo 9-16) pvm/mpm Palaute Lähetä palautetta sivustosta Avautuu uuteen välilehteen Raflaamo.fi Lounas Saavutettavuus Avautuu uuteen välilehteen Muuta evästeasetuksia Yleiset tiedot Bonusta Applen Lompakolla Lahjakortit Avautuu uuteen välilehteen Medialle Tietosuoja Oiva-raportit Avautuu uuteen välilehteen Työpaikat Avautuu uuteen välilehteen Etsi ja varaa tiloja Avautuu uuteen välilehteen Sokoshotels.fi Avautuu uuteen välilehteen SOK Matkailu- & ravitsemiskaupan ketjuohjaus SOK PL 1 00088 S-RYHMÄ, Y-tunnus 0116323-1 Siirry pääsisältöön Kirjaudu Hae Avaa mobiilivalikko … … Kirjaudu Hae Suomeksi (FI) På svenska (SV) In English (EN) Eesti keeles (ET) … … Esittely Ruokalista Juhlat ja kokoukset Grill It! Marinan terassi Ruokalistamme Ruokalistamme Ruokalistamme Lounas Ruokalista Menut Lapsille Viinit ja drinkit S-Etukortilla edullisesti Juhlakauden menut 9.9.–13.4. TOK 125 -menu 24 25 26 Perjantai 12.6. Perjantai 12.6. Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja"
       ],
       "status": "ok",
       "message": ""
@@ -33,13 +34,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Savustettua lohta M,G, tartarkastike M,G, tilliperunat L,G",
-        "Jauheliha-makaronilaatikko L",
-        "Koskenlaskijan porkkanasosekeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
