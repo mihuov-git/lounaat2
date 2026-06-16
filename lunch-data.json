@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-15T07:35:36.956Z",
-  "dateLabel": "maanantaina 15.6.2026",
-  "weekdayName": "maanantai",
+  "generatedAt": "2026-06-16T07:40:29.326Z",
+  "dateLabel": "tiistaina 16.6.2026",
+  "weekdayName": "tiistai",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Talon jauhelihapihvit ja paistettua sipulia",
-        "Mustapapu-linssipataa ja paahdettuja kikherneitä"
+        "Bearnaise-uunibroileria",
+        "Kasvis-soijalasagnea"
       ],
       "status": "ok",
       "message": ""
@@ -33,13 +33,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Olivian kanaa L,G, basmatiriisi M,G",
-        "Silakkapihvit L, ruohosipulikermaviili L,G, perunamuhennos L,G",
-        "Curry-kasviskeittoa V,M,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
