@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-23T07:58:20.429Z",
-  "dateLabel": "tiistaina 23.6.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-06-24T06:15:50.113Z",
+  "dateLabel": "keskiviikkona 24.6.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -30,9 +30,13 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Jauheliha crepsit L, limejogurtti L,G",
+        "Kana-kasvis wokki M,G, basmatiriisi M,G",
+        "Palsternakkakeittoa L,G"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
