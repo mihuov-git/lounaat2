@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-25T07:54:31.846Z",
-  "dateLabel": "torstaina 25.6.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-06-26T06:20:19.942Z",
+  "dateLabel": "perjantaina 26.6.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -30,13 +30,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Lohta Hollandaise L,G, tilliperunat L,G",
-        "Pippuripossua L,G, riisi M,G",
-        "Tomaatti-vuohenjuustokeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
