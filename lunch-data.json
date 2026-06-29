@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-26T07:02:21.392Z",
-  "dateLabel": "perjantaina 26.6.2026",
-  "weekdayName": "perjantai",
+  "generatedAt": "2026-06-29T07:03:23.021Z",
+  "dateLabel": "maanantaina 29.6.2026",
+  "weekdayName": "maanantai",
   "mode": "automatic",
   "results": [
     {
@@ -31,11 +31,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "BBQ kassleria M,G, valkosipuliperunat L,G",
-        "Kana-pastagratiini L, parmesan",
-        "Katkarapukeittoa L,G",
-        "Kulttuurikuja 1, 20800 Turku",
-        "13,50 €"
+        "Kookoskanaa ja kasviksia, riisi M,G",
+        "Kinkku-aurajuustokiusaus L,G",
+        "Herkkusienikeittoa L,G"
       ],
       "status": "ok",
       "message": ""
