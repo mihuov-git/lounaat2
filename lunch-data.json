@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T05:48:35.101Z",
+  "generatedAt": "2026-07-13T06:29:07.165Z",
   "dateLabel": "maanantaina 13.7.2026",
   "weekdayName": "maanantai",
   "mode": "automatic",
@@ -30,13 +30,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Kookoskanaa ja kasviksia, riisi M,G",
-        "Kinkku-aurajuustokiusaus L,G",
-        "Herkkusienikeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
