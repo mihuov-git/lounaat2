@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-14T07:21:11.144Z",
-  "dateLabel": "tiistaina 14.7.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-07-15T05:09:52.495Z",
+  "dateLabel": "keskiviikkona 15.7.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -31,9 +31,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Lihapyörykät pekonikastikkeella, perunamuhennos L,G",
-        "Kylmäsavulohi-kesäkurpitsapasta L, parmesan",
-        "Pinaattikeittoa L,G"
+        "Häränlihatortillat M, salsaa M,G ja kermaviiliä L,G",
+        "Kampelaa kuohuviinikastikkeella, tilliperunat L,G",
+        "Maa-artisokkakeittoa L,G"
       ],
       "status": "ok",
       "message": ""
