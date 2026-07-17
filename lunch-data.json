@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-16T07:32:24.114Z",
-  "dateLabel": "torstaina 16.7.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-07-17T05:22:39.760Z",
+  "dateLabel": "perjantaina 17.7.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -31,9 +31,11 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Glaseerattua possunpaistia M,G, viipaleperunat M,G",
-        "Kasvis-Curry ja jasmiiniriisi M,G",
-        "Lohikeittoa L,G"
+        "Makkaramix ja perunamuhennos L,G",
+        "Pinaatti-vuohenjuustolasagnette L",
+        "Intialaista kanakeittoa M,G",
+        "Kulttuurikuja 1, 20800 Turku",
+        "13,50 €"
       ],
       "status": "ok",
       "message": ""
