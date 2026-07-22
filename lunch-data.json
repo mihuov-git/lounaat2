@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T06:42:18.694Z",
+  "generatedAt": "2026-07-22T07:43:35.225Z",
   "dateLabel": "keskiviikkona 22.7.2026",
   "weekdayName": "keskiviikko",
   "mode": "automatic",
@@ -30,13 +30,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Häränlihatortillat M, salsaa M,G ja kermaviiliä L,G",
-        "Kampelaa kuohuviinikastikkeella, tilliperunat L,G",
-        "Maa-artisokkakeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
