@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T06:39:45.052Z",
+  "generatedAt": "2026-07-23T07:45:12.766Z",
   "dateLabel": "torstaina 23.7.2026",
   "weekdayName": "torstai",
   "mode": "automatic",
@@ -30,9 +30,13 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Glaseerattua possunpaistia M,G, viipaleperunat M,G",
+        "Kasvis-Curry ja jasmiiniriisi M,G",
+        "Lohikeittoa L,G"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
