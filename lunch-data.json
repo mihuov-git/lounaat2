@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-28T07:48:12.780Z",
-  "dateLabel": "tiistaina 28.7.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-07-29T05:31:17.411Z",
+  "dateLabel": "keskiviikkona 29.7.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -31,9 +31,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Uuniperunat feta-kasvis ja katkaraputäyte L,G",
-        "Chili con Carne possusta M,G, paahdettua riisiä M,G",
-        "Kermaista lohikeittoa L,G"
+        "Jauhelihalasagne L",
+        "Pinaattiletut L (glut keittiöstä) puolukkahillo, persiljaperunat L,G",
+        "Kookos-kanakeittoa M,G"
       ],
       "status": "ok",
       "message": ""
