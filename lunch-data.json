@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T05:24:26.134Z",
+  "generatedAt": "2026-08-04T06:03:38.146Z",
   "dateLabel": "tiistaina 4.8.2026",
   "weekdayName": "tiistai",
   "mode": "automatic",
@@ -30,9 +30,13 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Uuniperunat feta-kasvis ja katkaraputäyte L,G",
+        "Chili con Carne possusta M,G, paahdettua riisiä M,G",
+        "Kermaista lohikeittoa L,G"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
