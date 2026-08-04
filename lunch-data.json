@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-03T07:43:22.367Z",
-  "dateLabel": "maanantaina 3.8.2026",
-  "weekdayName": "maanantai",
+  "generatedAt": "2026-08-04T05:24:26.134Z",
+  "dateLabel": "tiistaina 4.8.2026",
+  "weekdayName": "tiistai",
   "mode": "automatic",
   "results": [
     {
@@ -30,13 +30,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Bearnaise broileria L,G, basmatiriisi M,G",
-        "Lihapyörykät ja perunamuhennos L,G",
-        "Parsakaalikeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
