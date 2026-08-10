@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-07T07:40:39.981Z",
-  "dateLabel": "perjantaina 7.8.2026",
-  "weekdayName": "perjantai",
+  "generatedAt": "2026-08-10T04:06:01.814Z",
+  "dateLabel": "maanantaina 10.8.2026",
+  "weekdayName": "maanantai",
   "mode": "automatic",
   "results": [
     {
@@ -10,9 +10,12 @@
       "subtitle": "Raflaamo",
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Talon jauhelihapihvit ja paistettua sipulia",
+        "Mustapapu-linssipataa ja paahdettuja kikherneitä"
+      ],
+      "status": "ok",
+      "message": ""
     },
     {
       "key": "viidesNayttamo",
@@ -31,11 +34,9 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Ylikypsää possun niskaa M,G, lohkoperunat M,G",
-        "Intialainen kasviscurry M,G, jasmiiniriisi M,G",
-        "Lihakeittoa M,G",
-        "Kulttuurikuja 1, 20800 Turku",
-        "13,50 €"
+        "Marry me kanaa L,G, riisi M,G",
+        "Paneeroitua kampelaa L, remoulade M,G",
+        "Sienikeittoa L,G"
       ],
       "status": "ok",
       "message": ""
