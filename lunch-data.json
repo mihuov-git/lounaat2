@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T04:16:49.714Z",
+  "generatedAt": "2026-08-12T04:58:30.487Z",
   "dateLabel": "keskiviikkona 12.8.2026",
   "weekdayName": "keskiviikko",
   "mode": "automatic",
@@ -33,13 +33,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Maapähkinä-kookosbroileria M,G",
-        "Jauheliha mousakka L,G",
-        "Tomaatti-vuohenjuustokeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
