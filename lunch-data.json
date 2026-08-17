@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T07:15:01.681Z",
+  "generatedAt": "2026-08-17T07:59:18.230Z",
   "dateLabel": "maanantaina 17.8.2026",
   "weekdayName": "maanantai",
   "mode": "automatic",
@@ -33,13 +33,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Kermaiset lihapullat ja valkosipulikermaperunat L,G",
-        "Italialainen kanapasta L, parmesan",
-        "Parsakaali-juustokeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
