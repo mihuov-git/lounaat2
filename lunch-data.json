@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-17T07:59:18.230Z",
-  "dateLabel": "maanantaina 17.8.2026",
-  "weekdayName": "maanantai",
+  "generatedAt": "2026-08-18T03:07:16.091Z",
+  "dateLabel": "tiistaina 18.8.2026",
+  "weekdayName": "tiistai",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Ylikypsää härkää ja punaviinikastiketta",
-        "Tofu-kasviscurrya ja suolapähkinöitä"
+        "Rapea kalaleike, tilli-kermaviilikastiketta ja sitruunalohkoja",
+        "Kasvis-fetajuustopaistos PÄ"
       ],
       "status": "ok",
       "message": ""
@@ -33,9 +33,13 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Meksikolainen nachovuoka häränlihasta L",
+        "Pippuriset kalkkunapihvit L,G, pilahviriisi M,G",
+        "Paahdettua paprikakeittoa L,G"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
