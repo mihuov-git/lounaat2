@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T07:02:24.842Z",
+  "generatedAt": "2026-08-18T07:50:24.323Z",
   "dateLabel": "tiistaina 18.8.2026",
   "weekdayName": "tiistai",
   "mode": "automatic",
@@ -33,13 +33,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Meksikolainen nachovuoka häränlihasta L",
-        "Pippuriset kalkkunapihvit L,G, pilahviriisi M,G",
-        "Paahdettua paprikakeittoa L,G"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
