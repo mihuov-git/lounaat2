@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T04:57:47.406Z",
+  "generatedAt": "2026-08-21T05:48:19.876Z",
   "dateLabel": "perjantaina 21.8.2026",
   "weekdayName": "perjantai",
   "mode": "automatic",
@@ -33,15 +33,9 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [
-        "Possun leike Gordon Bleu L, aioli L,G, ranskalaiset M,G",
-        "Kesäkurpitsa-fetapaistos L,G",
-        "Lohiseljankaa L,G, smetanaa L,G",
-        "13,50 €",
-        "Sisältää lämpimän ruuan, monipuolisen salaattipöydän, FresCon leivät ja levitteen, ruokajuomana kotikalja ja vesi sekä jälkiruokakahvi tai -tee."
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     }
   ]
 }
