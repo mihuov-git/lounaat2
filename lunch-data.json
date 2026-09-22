@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-21T07:56:02.718Z",
-  "dateLabel": "maanantaina 21.9.2026",
-  "weekdayName": "maanantai",
+  "generatedAt": "2026-09-22T07:41:05.345Z",
+  "dateLabel": "tiistaina 22.9.2026",
+  "weekdayName": "tiistai",
   "mode": "automatic",
   "results": [
     {
@@ -11,8 +11,8 @@
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
       "items": [
-        "Uunissa paahdettua kirjolohta ja Hollandaisekastiketta",
-        "Syksyiset kasviskääryleet ja puolukkahilloa"
+        "Paahdettua ylikypsää possua Korea-BBQ kastikkeella",
+        "Pinaatti-kasvispihvit ja puolukkahilloa"
       ],
       "status": "ok",
       "message": ""
@@ -33,9 +33,14 @@
       "subtitle": "Fresco Ravintolat",
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
-      "items": [],
-      "status": "missing",
-      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
+      "items": [
+        "Panko kuorrutettua kampelaa L, sitrusmajoneesi M, tilliperunat L,G",
+        "Makkarakastike L,G, perunamuhennos L,G",
+        "Herkkusieni-kesäkurpitsavuoka L,G",
+        "Koskenlaskijan porkkanasosekeittoa L,G"
+      ],
+      "status": "ok",
+      "message": ""
     }
   ]
 }
