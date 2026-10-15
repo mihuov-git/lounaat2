@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-14T07:32:18.015Z",
-  "dateLabel": "keskiviikkona 14.10.2026",
-  "weekdayName": "keskiviikko",
+  "generatedAt": "2026-10-15T07:22:22.686Z",
+  "dateLabel": "torstaina 15.10.2026",
+  "weekdayName": "torstai",
   "mode": "automatic",
   "results": [
     {
@@ -10,12 +10,9 @@
       "subtitle": "Raflaamo",
       "price": "14,80 €",
       "url": "https://www.raflaamo.fi/fi/ravintola/turku/grill-it-marina-turku/menu/lounas",
-      "items": [
-        "Perinteiset lihapullat ja kermaista pippurikastiketta, etikkakurkkua ja puolukkahilloa",
-        "Lempeän tulinen chili-härkispaistos"
-      ],
-      "status": "ok",
-      "message": ""
+      "items": [],
+      "status": "missing",
+      "message": "Tämän päivän rivejä ei löytynyt lähdesivulta."
     },
     {
       "key": "viidesNayttamo",
@@ -34,10 +31,10 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Marokkolainen sitruunabroileri M,G, riisi M,G",
-        "Janssoninkiusaus L,G",
-        "Kukkakaalipihvit L, yrttikermaviili L,G, persiljaperunat L,G",
-        "Ryynimakkarakeittoa M"
+        "Savustettua lohta M,G, kapriskastike L,G, tilliperunat L,G",
+        "Jauhelihalasagne L",
+        "Koskenlaskijan parsakaaligratiini L,G",
+        "Kookos-linssikeittoa M,G"
       ],
       "status": "ok",
       "message": ""
