@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-20T07:28:59.651Z",
-  "dateLabel": "tiistaina 20.10.2026",
-  "weekdayName": "tiistai",
+  "generatedAt": "2026-10-21T07:32:12.590Z",
+  "dateLabel": "keskiviikkona 21.10.2026",
+  "weekdayName": "keskiviikko",
   "mode": "automatic",
   "results": [
     {
@@ -31,10 +31,10 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Salvia-pesto broileria L,G, paprikariisi M,G",
-        "Karamellisoitua possua juurespedillä M,G",
-        "Kasvis Curry V,M,G",
-        "Katkarapukeittoa L,G"
+        "Uuniperunat fetatäyte L,G ja savuporotäyte L,G",
+        "Kampelaa valkoviini-fenkolikastikkeella L,G, tilliperunat L,G",
+        "Broileri-pinaattipasta L, parmesan",
+        "Suppilovahverokeittoa L,G"
       ],
       "status": "ok",
       "message": ""
