@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T08:24:35.948Z",
-  "dateLabel": "torstaina 29.10.2026",
-  "weekdayName": "torstai",
+  "generatedAt": "2026-10-30T08:33:59.556Z",
+  "dateLabel": "perjantaina 30.10.2026",
+  "weekdayName": "perjantai",
   "mode": "automatic",
   "results": [
     {
@@ -31,10 +31,11 @@
       "price": "13,50 €",
       "url": "https://www.frescoravintolat.fi/lounas/aitiopaikan-lounaslista/",
       "items": [
-        "Paahdettua lohta M,G, tartarkastike L,G, tilliperunat L,G",
-        "Kinkku-aurajuustokiusaus L,G",
-        "Tomaatti-mozzarella-rucolapizza L",
-        "Punajuuri-kookoskeittoa V,M,G"
+        "Hot honey kanaa ja chili-hunajakastiketta L, kermaviiliä L,G, ranskalaisia M,G",
+        "Bataatti-jauhelihavuoka L,G",
+        "Sriracha-pepperonipiirakka L",
+        "Paahdettua kurpitsakeittoa L,G",
+        "13,50 €"
       ],
       "status": "ok",
       "message": ""
